@@ -1,0 +1,1 @@
+Put in Assetto corsa folder at /apps/lua/automatas
