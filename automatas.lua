@@ -27,8 +27,8 @@ local c = {
 
 local controls = ac.overrideCarControls()
 
-local BRAKING_SHIFT_TIME = 10
-local ACCELERATION_SHIFT_TIME = 15 -- 1.5
+local BRAKING_SHIFT_TIME = 1
+local ACCELERATION_SHIFT_TIME = 1.5 -- 1.5
 local SHIFT_UP_MODIFIER = 0.6
 local MINIMUM_FIRST_GEAR_SPEED = 50
 
