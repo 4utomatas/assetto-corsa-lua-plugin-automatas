@@ -137,6 +137,14 @@ local function drawMin1stGearSpeed()
   end
 end
 
+local function drawShiftTimeSlider()
+  ui.text("Time delay for shifting")
+  local value, changed = ui.slider("##shiftTimeSlider", ACCELERATION_SHIFT_TIME, 0, 2, "KMH: %.1f")
+  if changed then
+    ACCELERATION_SHIFT_TIME = value
+  end
+end
+
 function script.windowMain(dt)
   local notAvailable = not car.isUserControlled or sim.isReplayActive
   if notAvailable then
@@ -159,6 +167,7 @@ function script.windowMain(dt)
 
   drawMaxRpmSlider()
   drawMin1stGearSpeed()
+  drawShiftTimeSlider()
   if ui.button(modes[driveMode + 1], vec2(-0.1, 0)) then
     changeDriveMode()
   end
